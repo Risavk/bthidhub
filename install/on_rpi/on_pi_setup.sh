@@ -7,7 +7,7 @@ sudo apt-get install git libcairo2-dev libdbus-1-dev libgirepository1.0-dev libg
 sudo pip3 install -r $HOME/bthidhub/requirements.txt --break-system-packages
 
 cd $HOME/bthidhub/install/on_rpi
-git clone https://github.com/Dreamsorcerer/bluez.git --depth 1
+git clone https://github.com/Risavk/bluez.git --depth 1
 cd $HOME/bthidhub/install/on_rpi/bluez
 autoreconf -fvi
 
@@ -41,7 +41,8 @@ sudo hostnamectl set-hostname bthidhub
 
 # Compile some Python modules to reduce lag.
 # We do this at the end, as the project is already usable without this step.
-cd $HOME/bthidhub/
-mypyc
+# Temporary removed as results in strange errors on my system
+#cd $HOME/bthidhub/
+#mypyc
 
 sudo reboot
